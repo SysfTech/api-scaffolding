@@ -3,6 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.sysftech.open</groupId>
+    <artifactId>api-scaffolding</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>api-scaffolding</name>
+    <description>Project scaffolding for Spring Boot</description>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -10,15 +16,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.sysftech.open</groupId>
-    <artifactId>api-scaffolding</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>api-scaffolding</name>
-    <description>Project scaffolding for Spring Boot</description>
-
     <properties>
         <java.version>11</java.version>
     </properties>
+
+    <!-- maven库改成有赞云的才能下载有赞的sdk -->
+    <repositories>
+        <repository>
+            <id>baymax-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>https://maven.youzanyun.com/repository/maven-releases
+            </url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -46,6 +56,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
         </dependency>
     </dependencies>
 
